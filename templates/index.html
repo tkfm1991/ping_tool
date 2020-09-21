@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 id="index">使い方</h2>
+        <ul class="msr_flow05">
+            <li><span>Flowchart</span></li>
+            <li><span>Flowchart</span></li>
+            <li><span>Flowchart</span></li>
+            <!--<li class="active"><span>Flowchart</span></li>-->
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2 id="index">Pingリスト</h2>
+        {% for host in ping_list %}
+            <ul>
+                <li>[{{ host.name }}]: {{ host.ip }}</li>
+            </ul>
+        {% endfor %}
+
+    </div>
+
+    <div class="container">
+        <h2 id="index">選択</h2>
+        <div class="input-group">
+            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                <option selected>選択してください...</option>
+                <option value="01">One</option>
+                <option value="02">Two</option>
+                <option value="03">Three</option>
+            </select>
+            <div class="input-group-append">
+                <form action="{{ url_for('get_ping') }}">
+                    <button type="submit" class="btn btn-outline-secondary w-50px" id="action" type="button">実行</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <details>
+            <summary><h2 id="index">結果</h2></summary>
+            <pre>
+                {% for ping_result in ping_results %}
+                    {{ ping_result[6] }}
+                    {{ ping_result[7] }}
+                {% endfor %}
+            </pre>
+        </details>
+    </div>
+
+
+
+
+{% endblock %}

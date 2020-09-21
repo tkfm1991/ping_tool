@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384ππ-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        {% block head %}
+        {% endblock %}
+        <title>{% block title %}MyPage{% endblock %}</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('top') }}">Top</a>
+            <a class="navbar-brand" href="{{ url_for('summary') }}">Summary</a>
+            <a class="navbar-brand" href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+        <div class="jumbotron">
+            <h1>Pingツール</h1>
+        </div>
+        <div class="container">
+            {% block content %}
+            {% endblock %} 
+        </div>
+
+    </body>
+</html>

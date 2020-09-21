@@ -1,0 +1,99 @@
+/* フローチャート */
+.msr_flow05 {
+  color: #333333;
+  counter-reset: section;
+  list-style: none;
+  overflow: hidden;
+}
+.msr_flow05 li {
+  background:#FFFFFF;
+  border-top:1px solid #999999;
+  border-left:1px solid #999999;
+  border-bottom:1px solid #999999;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #333333;
+  display: inline-block;
+  font-size: 18px;
+  height:60px;
+  margin:0 32px 0 0;
+  min-width: 200px;
+  padding: 18px 0 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+.msr_flow05 li span{
+  padding:0 0 4px
+}
+.msr_flow05 li:after {
+  content: "";
+  background:#FFFFFF;
+  display: inline-block;
+  height:56px;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  vertical-align: middle;
+  width:56px;
+  position:absolute;
+  top:0;
+  right:-19px;
+  z-index:-1;
+}
+.msr_flow05 li:before {
+  color:#CCCCCC;
+  content:counters(section, ".") " ";
+  counter-increment: section;
+  font-size:32px;
+  left:8px;
+  line-height:1;
+  margin:-16px 0 0;
+  position:absolute;
+  top:50%;
+}
+/* アクティブ */
+.msr_flow05 .active span{
+  border-bottom:1px solid #999999;
+}
+
+/* アコーディオン設定 */
+summary {
+  cursor: pointer;
+  transition: 0.2s; /* 変化を滑らかに */
+}
+/* ホバー時のスタイル */
+summary:hover {
+  cursor: pointer; /* カーソルを指マークに */
+  background-color: #EFEFEF;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 目次 */
+#index {
+  border-left: 10px solid #CC3366;
+  border-bottom: 1px dashed #CC3366; /* 下ボーダーを、1px幅の破線、線色#CC3366に */
+}
+
+h2 {
+  color: #FF0000;
+}
+
+/* リスト */
+ul {
+  list-style: none; 
+}
+
+/* 実行ボタン */
+/*
+button {
+  padding:0 0 50px 50px;
+}
+*/
+
+
