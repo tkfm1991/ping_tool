@@ -75,13 +75,14 @@ details summary::-webkit-details-marker {
 }
 
 /* 目次 */
-#index {
-  border-left: 10px solid #CC3366;
+.index {
+  border-left: 10px solid #353A3F; /* #CC3366 */
   border-bottom: 1px dashed #CC3366; /* 下ボーダーを、1px幅の破線、線色#CC3366に */
+  padding-left: 10px;
 }
 
 h2 {
-  color: #FF0000;
+  color: #000000;
 }
 
 /* リスト */
@@ -90,10 +91,10 @@ ul {
 }
 
 /* 実行ボタン */
-/*
-button {
-  padding:0 0 50px 50px;
+
+.btn btn-outline-secondary w-50px {
+  padding-left: 50px;
 }
-*/
+
 
 

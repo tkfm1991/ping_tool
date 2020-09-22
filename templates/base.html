@@ -12,11 +12,23 @@
         {% endblock %}
         <title>{% block title %}MyPage{% endblock %}</title>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <body data-spy="scroll" data-target="#navbar" style="positon:relative padding-top: 70px">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="{{ url_for('top') }}">Top</a>
             <a class="navbar-brand" href="{{ url_for('summary') }}">Summary</a>
             <a class="navbar-brand" href="{{ url_for('contact') }}">Contact</a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#howto">使い方</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#select">選択</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#result">結果</a>
+                </li>
+            </ul>
         </nav>
         <div class="jumbotron">
             <h1>Pingツール</h1>
