@@ -12,7 +12,7 @@ def ping_cmd():
 
 
 def ping_cmd_args(ip):
-    cmd = 'ping -c 4 ' + ip
+    cmd = 'ping -c 10 ' + ip
     result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE)
     result_str = result.stdout.decode()
     output = result_str.split('\n')

@@ -20,12 +20,22 @@
     <div class="container">
         <h2 id="index">Pingリスト</h2>
         <br>
-        {% for host in host_list %}
-            <ul>
-                <li>[{{ host.name }}]: {{ host.ip }}</li>
-            </ul>
-        {% endfor %}
-
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for host in host_list %}
+                <tr>
+                    <td>{{ host.name }}</td>
+                    <td>{{ host.ip }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
     <br>
 
