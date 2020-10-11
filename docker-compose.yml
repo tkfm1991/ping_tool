@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    tool:
+        build:
+            context: ./tool
+            dockerfile: Dockerfile
+        image: tool_img
+        container_name: tool
+        restart: unless-stopped
+        ports:
+            - "8008:80"
+
